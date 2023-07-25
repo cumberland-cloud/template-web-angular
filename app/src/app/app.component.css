@@ -1,0 +1,163 @@
+main,
+svg{
+    width: 100%;
+    height: 100%;
+}
+#scan-lines{
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+}
+#on-off-container{
+    width: 100%;
+    height: 100%;
+}
+.on-animation{
+    -webkit-animation: on 1s steps(55);
+    -moz-animation: on 1s steps(55);
+    -o-animation: on 1s steps(55);
+    animation: on 1s steps(55); 
+    background: url('/assets/svgs/graphics/keyframes_desktop_screen_power.svg');
+}
+.off-animation{
+    -webkit-animation: off 1s steps(54) 1;
+    -moz-animation: off 1s steps(54) 1;
+    -o-animation: off 1s steps(54) 1;
+    animation: off 1s steps(54);
+    background: url('/assets/svgs/graphics/keyframes_desktop_screen_power.svg');
+}
+.static-animation{
+    -webkit-animation: static 1.5s steps(15) infinite;
+    -moz-animation: static 1.5s steps(15) infinite;
+    -o-animation: static 1.5s steps(15) infinite;
+    animation: static 1.5s steps(15) infinite;
+    background: url('/assets/svgs/graphics/keyframes_desktop_screen_static.svg');
+}
+.tune-animation{
+    -webkit-animation: tune 1.5s steps(15);
+    -moz-animation: tune 1.5s steps(15);
+    -o-animation: tune 1.5s steps(15);
+    animation: tune 1.5s steps(15);
+    background: url('/assets/svgs/graphics/keyframes_desktop_screen_static.svg');
+}
+.gradient-bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+nav{
+    position: absolute;
+}
+
+@keyframes on{
+    100% { background-position-y: -8886.12988px; }
+}
+@keyframes off {
+    0% { background-position-y: -8724.56388px; }
+    100% { background-position-y: 0px; }
+}
+@keyframes static{
+    100% { background-position-y: -2423.52002px; }
+}
+@keyframes tune{
+    0% {
+        background-position-y: 0px;
+        opacity: 1;
+    }
+    100% { 
+        background-position-y:-2423.52002px; 
+        opacity: 0;
+    }
+}
+@-moz-keyframes on{
+    100% { background-position-y: -8886.12988px; }
+}
+@-moz-keyframes off {
+    0% { background-position-y: -8724.56388px; }
+    100% { background-position-y: 0px; }
+}
+@-moz-keyframes static{
+    100% { background-position-y: -2423.52002px; }
+}
+@-moz-keyframes tune{
+    0% {
+        background-position-y: 0px;
+        opacity: 1;
+    }
+    100% { 
+        background-position-y:-2423.52002px;
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes on{
+    100% { background-position-y: -8886.12988px; }
+}
+@-webkit-keyframes off {
+    0% { background-position-y: -8886.12988px; }
+    100% { background-position-y: 0px; }
+}
+@-webkit-keyframes static{
+    100% { background-position-y: -2423.52002px; }
+}
+@-webkit-keyframes tune{
+    0% {
+        background-position-y: 0px;
+        opacity: 1;
+    }
+    100% { 
+        background-position-y: -2423.52002px;
+        opacity: 0;
+    }
+}
+
+
+@media (max-width: 576px){
+    nav{
+        top: 25%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .dial-revolver{
+        transform-origin: 20.5385817953% 89.887528818%;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+    }
+}
+@media (min-width: 577px){
+    nav {
+        height: 90%;
+        left: 5%;
+        top: 5%;
+        width: 20%;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+    }
+    nav > a:not(:first-child){
+        margin-bottom: 5%;
+    }
+    nav > a > img{
+        width: 90%;
+    } 
+    .dial-revolver{
+        transform-origin: 87.6067046268% 34.0078248819%;
+    }
+    #desktop-television{
+        width: 100%;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content:center;
+    }
+}

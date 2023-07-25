@@ -1,0 +1,454 @@
+<svg id="desktop-television" 
+   class="home-background"
+   *ngIf="conf.viewport && !conf.mobileMode()"
+   viewBox="0 0 423.33333 238.125">
+   <defs>
+      <g id="frames" 
+         class="med-stroke"
+         aria-hidden="true">
+         <rect id="back-frame"
+            width="422.92188"
+            height="237.61427"
+            x="0.2382192"
+            y="0.16071239"
+            ry="35.116184" />
+         <rect id="screen-frame"
+            width="395.74524"
+            height="210.7731"
+            x="14.015488"
+            y="13.837298"
+            ry="36.43074"/>
+         <path id="panel-frame"
+            d="m 331.15502,13.765023 h 50.08601 c 22.09812,0 28.59198,8.670492 28.59198,33.822281 V 192.17151 c 0,21.22715 -6.77013,32.51117 -28.17346,32.51117 h -50.50453 z"/>
+      </g>
+      <g id="speaker"
+         aria-hidden="true"
+         class="thin-stroke"
+         transform="matrix(0,0.99842243,-1.434881,0,821.87663,42.776166)">
+         <rect id="vent-border"
+            width="43.900894"
+            height="90.618881"
+            x="-335.86383"
+            y="79.54158"
+            transform="rotate(-90)"
+            ry="3.9084544"/>
+         <rect id="vent-panel"
+            width="39.399261"
+            height="76.717903"
+            x="-333.54184"
+            y="90.750641"
+            transform="rotate(-90)"
+            ry="3.7783368"/>
+         <g id="vents" class="med-stroke">
+            <use *ngFor="let item of sequence(17)"
+               href="/assets/svgs/graphics/definitions_viewport.svg#vent-definition"
+               [attr.x]="item*4.167854+93.969864"/>
+         </g>
+      </g>
+      <symbol id="btn-pressed-defintion">
+         <circle id="base-pressed"
+            cx="379.50708"
+            cy="29.271889"
+            r="6.8449936"/>
+         <circle id="front-face-pressed"
+               cx="379.4801"
+               cy="29.172449"
+               r="4.6292696" />
+      </symbol>
+      <symbol id="btn-unpressed-definition">
+         <circle id="base-unpressed"
+            cx="379.50708"
+            cy="29.271889"
+            r="6.8449936"/>
+         <circle id="back-face-unpressed"
+            cx="379.72046"
+            cy="29.000069"
+            r="4.6292696"/>
+         <circle id="front-face-unpressed"
+            cx="380.34842"
+            cy="28.240227"
+            r="4.6292696" />
+      </symbol>
+      <clipPath id="viewport"
+         clipPathUnits="objectBoundingBox">
+         <rect id="path-rectangle"
+            ry="0.210971938"
+            rx="0.14"
+            width="1"
+            height="1"/>
+      </clipPath>
+      <clipPath id="view-symbol-path"
+         clipPathUnits="userSpaceOnUse">
+         <circle id="path-circle"
+            style="fill:none;stroke:#f57f17;stroke-width:2.8;"
+            cx="200.94026"
+            cy="197.74118"
+            r="196.8553" />
+      </clipPath>
+   </defs>
+
+   <use href="#frames"/>
+   <g id="panel"
+      role="region"
+      aria-label="Television control panel">
+      <use href="#speaker"/>
+      <g id="mantle" 
+         class="med-stroke"
+         role="content-info">
+         <text id="cumbercloud-text"
+            class="clickable"
+            x="371.52209"
+            y="122.19033">
+            <tspan id="cumbercloud-text-line"
+               role="link"
+               (click)="routeToCumbercloud()"
+               x="371.6883727"
+               y="128.0470326">
+               Cumberland Cloud
+            </tspan>
+         </text>
+         <use href="/assets/svgs/graphics/definitions_viewport.svg#copyright-definition"/>
+      </g>
+      <g id="dial" #dial
+         role="navigation"
+         class="clickable med-stroke"
+         aria-controls="screen"
+         [attr.aria-label]="dialLabel()"
+         (click)="rotate($event)">
+         <ellipse id="dial-base"
+            cx="370.86838"
+            cy="80.981133"
+            rx="34.569489"
+            ry="34.694439" />
+         <ellipse id="dial-face"
+            class="dial-revolver"
+            [@cntl_rotate]="rotateCntl.state"
+            cx="370.86838"
+            cy="80.981133"
+            rx="23.981251"
+            ry="22.952394" />
+         <ellipse id="dial-grooves"
+            class="dial-revolver"
+            [@cntl_rotate]="rotateCntl.state"
+            cx="370.86838"
+            cy="80.981133"
+            rx="23.746101"
+            ry="22.783127"/>
+         <g id="dial-handle" 
+            class="dial-revolver"
+            [@cntl_rotate]="rotateCntl.state"
+         >
+            <ellipse id="dial-outline"
+               cx="370.86594"
+               cy="79.846771"
+               rx="1.932146"
+               ry="23.994455"/>
+            <ellipse id="dial-pivot"
+               cx="370.86838"
+               cy="80.981133"
+               rx="2.0978038"
+               ry="2.1359975" />
+         </g>
+         <g id="dial-symbols" 
+            class="symbol-stroke">
+            <g id="home-symbol"
+               class="symbol"
+               transform="matrix(0.02274659,0,0,0.0222393,365.03393,46.252024)">
+               <path id="house"
+                  d="m 80,212 v 236 a 16,16 0 0 0 16,16 h 96 V 328 a 24,24 0 0 1 24,-24 h 80 a 24,24 0 0 1 24,24 v 136 h 96 a 16,16 0 0 0 16,-16 V 212" />
+               <path id="roof"
+                  d="M 480,256 266.89,52 c -5,-5.28 -16.69,-5.34 -21.78,0 L 32,256 M 400,179 V 64 h -48 v 69"/>
+            </g>
+            <g id="shop-symbol"
+               transform="matrix(0.02475766,0,0,0.02368519,391.17484,65.47241)">
+               <circle id="left-wheel"
+                  cx="176"
+                  cy="416"
+                  r="16"/>
+               <circle id="right-wheel"
+                  cx="400"
+                  cy="416"
+                  r="16" />
+               <g class="symbol">
+                  <path id="cart-handle"
+                     d="m 48,80 h 64 l 48,272 h 256"/>
+                  <path id="cart-basket"
+                     d="m 160,288 h 249.44 a 8,8 0 0 0 7.85,-6.43 l 28.8,-144 A 8,8 0 0 0 438.24,128 H 128"/>
+               </g>
+            </g>
+            <g id="location-symbol"
+               transform="matrix(0.02299224,0,0,0.02479543,383.54012,97.111454)">
+               <path id="location-border"
+                  class="symbol"
+                  d="M 448,256 C 448,150 362,64 256,64 150,64 64,150 64,256 c 0,106 86,192 192,192 106,0 192,-86 192,-192 z"/>
+               <path id="location-arrow"
+                  d="m 336.76,161 -186.53,82.35 c -10.47,4.8 -6.95,20.67 4.57,20.67 H 244 a 4,4 0 0 1 4,4 v 89.18 c 0,11.52 16,15 20.78,4.56 L 351,175.24 A 10.73,10.73 0 0 0 336.76,161 Z"/>
+            </g>
+            <g id="contact-symbol"
+               class="symbol"
+               transform="matrix(0.0209442,0,0,0.0194854,347.23449,98.527735)">
+               <rect id="envelope-border"
+                  x="48"
+                  y="96"
+                  width="416"
+                  height="320"
+                  rx="40"
+                  ry="40"/>
+               <path id="envelope-lid"
+                  d="M 112,160 256,272 400,160"/>
+            </g>
+            <g id="about-symbol"
+               transform="matrix(0.02513268,0,0,0.02736058,336.96136,64.049122)">
+               <path id="question-border"
+                  class="symbol"
+                  d="M 256,80 A 176,176 0 1 0 432,256 176,176 0 0 0 256,80 Z"/>
+               <path id="question-cue"
+                  d="m 200,202.29 c 0,0 0.84,-17.5 19.57,-32.57 C 230.68,160.77 244,158.18 256,158 c 10.93,-0.14 20.69,1.67 26.53,4.45 10,4.76 29.47,16.38 29.47,41.09 0,26 -17,37.81 -36.37,50.8 C 256.26,267.33 251,281.43 251,296" />
+               <circle id="question-dot"
+                  cx="250"
+                  cy="348"
+                  r="20" />
+            </g>
+         </g>
+      </g>
+      <g id="switch"
+         class="med-stroke clickable"
+         role="button"
+         aria-controls="screen"
+         aria-label="Turn television monitor on/off">
+         <g id="on-switch"
+            aria-label="On switch"
+            [attr.aria-disabled]="switched || pressed">
+            <g id="on-switch-pressed"
+               *ngIf="switched || pressed">
+               <use href="#btn-pressed-defintion"/>
+               <rect id="on-symbol-pressed"
+                  width="1.9401493"
+                  height="6.8358335"
+                  x="378.34769"
+                  y="25.76642"
+                  ry="0.97007465"/>
+            </g>
+            <g id="on-switch-unpressed"
+               *ngIf="!switched && !pressed"
+               matTooltip="Power on"
+               (click)="switch(true)">
+               <use href="#btn-unpressed-definition"/>
+               <rect id="on-symbol-unpressed"
+                  width="1.9401493"
+                  height="6.8358335"
+                  x="379.55701"
+                  y="24.570934"
+                  ry="0.97007465" />
+            </g>
+         </g>
+         <g id="off-switch"
+            aria-label="Off switched"
+            [attr.aria-disabled]="!switched || pressed">
+            <g id="off-switch-unpressed"
+               *ngIf="switched && ! pressed"
+               (click)="switch(false)"
+               matTooltip="Power off"
+               transform="translate(17.026406,-0.01569926)">
+               <circle id="off-base-unpressed"
+                  cx="379.50708"
+                  cy="29.271889"
+                  r="6.8449936" />
+               <circle id="off-back-face-unpressed"
+                  cx="379.72046"
+                  cy="29.000069"
+                  r="4.6292696"/>
+               <circle id="off-front-face-unpressed"
+                  cx="380.34842"
+                  cy="28.240227"
+                  r="4.6292696"/>
+               <circle id="off-symbol-unpressed"
+                  cx="380.44827"
+                  cy="28.123676"
+                  r="2.6423993" />
+            </g>
+            <g
+               id="off-switch-pressed"
+               *ngIf="!switched || pressed"
+               transform="translate(17.026406,-0.01569926)">
+               <circle id="off-base-pressed"
+                  cx="379.50708"
+                  cy="29.271889"
+                  r="6.8449936"/>
+               <circle id="off-front-face-pressed"
+                  cx="379.50708"
+                  cy="29.271889"
+                  r="4.6292696" />
+               <circle id="off-symbol-pressed"
+                  cx="379.65393"
+                  cy="29.320225"
+                  r="2.6423993"/>
+            </g>
+         </g>
+      </g>
+      <g id="view-switch"
+         class="clickable med-stroke"
+         aria-controls="desktop-television"
+         matTooltip="Television rots your brain."
+         (click)="toggleViewport()"
+         transform="translate(-35.803904,-0.42425632)"
+         role="button">
+         <circle id="view-base-unpressed"
+            cx="379.50708"
+            cy="29.271889"
+            r="6.8449936"/>
+         <circle id="view-back-face-unpressed"
+            cx="379.72046"
+            cy="29.000069"
+            r="4.6292696"/>
+         <circle id="view-front-face-unpressed"
+            cx="380.34842"
+            cy="28.240227"
+            r="4.6292696" />
+         <g id="view-symbol"
+            transform="translate(-0.19443288,-0.2333187)">
+            <path id="view-symbol-main"
+               d="m 369.78021,299.55 c 46.3,-75.8 36.9,-176.3 -28.6,-241.9 -76.8,-76.8 -201.8,-76.8 -278.599998,0 -76.8,76.8 -76.8,201.8 0,278.5 65.499998,65.5 165.999998,74.9 241.899998,28.6 l 112.5,112.5 c 18,18 47.3,18 65.3,0 18,-18 18,-47.3 0,-65.3 z m -69.3,-4 c -54.4,54.4 -142.8,54.4 -197.1,0 -54.399998,-54.4 -54.399998,-142.8 0,-197.1 54.4,-54.4 142.8,-54.4 197.1,0 54.3,54.3 54.3,142.7 0,197.1 z m -75.5,-123.6 h 59.4 v 45.3 h -59.4 v 59.4 h -45.3 v -59.4 h -59.3 v -45.3 h 59.4 v -59.4 h 45.3 v 59.4 z"
+               clip-path="url(#view-symbol-path)"
+               transform="matrix(0.015625,0,0,0.015625,377.59024,25.084452)"/>
+            <rect id="view-patch"
+               width="0.2219712"
+               height="0.36834702"
+               x="380.99338"
+               y="27.518623"/>
+            <circle id="view-border"
+               cx="380.68512"
+               cy="28.126659"
+               r="3.0510142" />
+         </g>
+    </g>
+   </g>
+   <g id="screen" 
+      class="med-stroke">
+         <rect id="screen-border"
+            aria-hidden="true"
+            width="287.66693"
+            height="185.31357"
+            x="29.30175"
+            y="26.586109"
+            ry="39.095963"/>
+         <rect id="screen-glass"
+            aria-hidden="true"
+            width="262.18674"
+            height="161.56648"
+            x="41.269844"
+            y="37.469738"
+            ry="35.114418" />
+         <foreignObject id="router-viewport"
+            class="pixel-cursor"
+            *ngIf="switched && !pressed && (tuned || tuning)"
+            width="262.18677"
+            height="161.56648"
+            x="41.269844"
+            y="37.469738"
+            ry="35.114418"
+            style="clip-path:url(#viewport);"> 
+            <main>
+               <router-outlet></router-outlet> 
+               <object id="scan-lines"
+                  aria-hidden="true"
+                  class="non-clickable"
+                  type="image/svg+xml" 
+                  data="/assets/svgs/graphics/fill_scan_lines.svg"
+               ></object>
+            </main>
+         </foreignObject>  
+         <foreignObject id="animation-viewport"
+            aria-hidden="true"
+            *ngIf="pressed || !tuned || tuning"
+            width="262.18677"
+            height="161.56648"
+            x="41.269844"
+            y="37.469738"
+            ry="35.114418"
+            clip-path="url(#viewport)"> 
+            <div id="on-off-container" 
+               [class.on-animation]="pressed && !switched"
+               [class.off-animation]="pressed && switched"
+               [class.static-animation]="!pressed && !tuned && switched"
+               [class.tune-animation]="tuning && switched"
+            ></div>
+         </foreignObject>
+   </g>
+   <g id="decorations"
+         aria-hidden="true">
+      <g id="screen-wood-grain">
+         <use id="left-wood-grain"
+            href="/assets/svgs/graphics/definitions_viewport.svg#grain-definition" 
+            transform="translate(18.449308)"/>
+         <use id="right-wood-grain"
+            href="/assets/svgs/graphics/definitions_viewport.svg#grain-definition"
+            transform="translate(328.255) scale(-1,1)"
+         />
+      </g>
+      <use id="screen-border-florish"
+         class="med-stroke"
+         href="/assets/svgs/graphics/definitions_viewport.svg#florish-definition"/>
+   </g>
+</svg>
+
+<main *ngIf="!conf.viewport || conf.mobileMode()"
+    class="home-background"
+> 
+   <router-outlet></router-outlet> 
+   <nav *ngIf="conf.activeRoute('/')">
+      <a id="facebook-link"
+         href="http://facebook.com"
+         target="_blank"
+         class="h-align-flex">
+         <img id="facebook-icon"
+            alt="Sunshine Daze Facebook"
+            title="Visit our Facebook, dude."
+            src="/assets/svgs/icons/facebook.svg"/>
+      </a>
+      <a id="instagram-link"
+         href="https://instagram.com"
+         target="_blank" 
+         class="h-align-flex">
+         <img id="instagram-icon"
+            alt="Sunshine Daze Instagram"
+            title="Our Instagram is a groovy place."
+            src="/assets/svgs/icons/instagram.svg"/>
+      </a>
+      <a id="store-link"
+         class="h-align-flex"
+         routerLink="/store">
+         <img id="store-icon"
+            alt="Sunshine Daze Store"
+            title="Browse our wares"
+            src="/assets/svgs/icons/shopping-cart.svg"/>
+      </a>
+      <a id="about-link"
+         class="h-align-flex"
+         routerLink="/about">
+         <img id="about-icon"
+            alt="About Us"
+            title="Learn about our business"
+            src="/assets/svgs/icons/about.svg"/>
+      </a>
+      <a id="location-link"
+         class="h-align-flex"
+         routerLink="/location">
+         <img id="location-icon"
+            alt="Location information"
+            title="Find our store"
+            src="/assets/svgs/icons/location.svg"/>
+      </a>
+      <a id="contact-link"
+         class="h-align-flex"
+         routerLink="/contact">
+         <img id="contact-icon"
+            alt="Contact Us"
+            title="Send us a message"
+            src="/assets/svgs/icons/contact.svg"/>
+      </a>
+   </nav>
+</main>
+
+
+

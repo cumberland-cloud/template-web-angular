@@ -1,0 +1,31 @@
+version: 0.2
+
+phases:
+
+  install: 
+    runtime-versions:
+      nodejs: 14.x
+    commands:
+      - npm install -g @angular/cli
+      - cd app
+      - npm install
+      - cd ..
+
+  pre_build:
+    commands: 
+      - aws s3 rm s3://${APPLICATION}-web/ --recursive
+      - aws s3 cp ./sitemap.xml s3://${APPLICATION}-web/sitemap.xml
+  
+  build:
+    commands:
+      - cd app
+      - npm run prerender
+      - aws s3 cp ./dist/app/server/ s3://${APPLICATION}-web/ --recursive
+      - aws s3 cp ./dist/app/browser/ s3://${APPLICATION}-web/ --recursive
+  
+  post_build:
+    commands:
+      - |
+        aws cloudfront create-invalidation \
+          --distribution-id $DISTRIBUTION_ID \
+          --paths "/*"

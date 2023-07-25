@@ -1,0 +1,8 @@
+#error{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.error-img{
+    height: 100%;
+}

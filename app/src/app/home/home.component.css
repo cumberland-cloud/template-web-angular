@@ -1,0 +1,78 @@
+
+svg{
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+}
+section{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    background: none;
+}
+nav,
+header{
+    position: absolute;
+}
+#scan-lines{
+    position: absolute;
+    width: 100%; 
+    height: 100%;
+}
+#home{
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    height: 100%;
+}
+
+@media (max-width: 576px){
+    header{
+        top: 5%;
+        width: 100%;
+        text-align: center;
+    }
+    nav{
+        top: 25%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    #home{
+        width: 300%;
+    }
+}
+@media (min-width: 577px){
+    nav {
+        height: 90%;
+        left: 5%;
+        top: 5%;
+        width: 20%;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+    }
+    nav > a:not(:first-child){
+        margin-bottom: 5%;
+    }
+    nav > a > img{
+        width: 90%;
+    } 
+    header{
+       top: 5%;
+       left: 55%;
+    }
+    header > h1 {
+        text-align: right;
+        line-height: 0.9
+    }
+    header > h1 > span {
+        margin-top: 2%;
+    }
+    #home{
+        width: 100%;
+    }
+}

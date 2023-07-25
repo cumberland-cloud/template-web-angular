@@ -1,0 +1,56 @@
+svg{
+    position: absolute;
+    overflow: visible;
+    top: 0%;
+    height: 100%;
+    width: 100%;
+}
+#store-animation{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+}
+.hidden{
+    display: none;
+}
+
+@media (max-width: 576px){
+    .clothing-on-animation{
+        -webkit-animation: clothing-on 1s steps(30);
+        -moz-animation: clothing-on 1s steps(30);
+        -o-animation: clothing-on 1s steps(30);
+        animation: clothing-on 1s steps(30);
+        background: url('/assets/svgs/graphics/keyframes_mobile_clothing_transition.svg');
+    }
+    
+    @keyframes clothing-on {
+        100% { background-position-y: -4032.19946px; }
+    }
+    @-moz-keyframes clothing-on{
+        100% { background-position-y: -4032.199467px; }
+    }
+    @-webkit-keyframes clothing-on{
+        100% { background-position-y: -4032.19946px; }
+    }
+}
+@media(min-width:577px){
+    .clothing-on-animation{
+        -webkit-animation: clothing-on 1s steps(19);
+        -moz-animation: clothing-on 1s steps(19);
+        -o-animation: clothing-on 1s steps(19);
+        animation: clothing-on 1s steps(19);
+        background: url('/assets/svgs/graphics/keyframes_desktop_clothing_transition.svg');
+    }
+    
+    @keyframes clothing-on {
+        100% { background-position-y: -812.20817px; }
+    }
+    @-moz-keyframes clothing-on{
+        100% { background-position-y: -812.20817px; }
+    }
+    @-webkit-keyframes clothing-on{
+        100% { background-position-y: -812.20817px; }
+    }
+}

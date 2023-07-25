@@ -1,0 +1,336 @@
+<svg id="desktop-clothing-dept"
+   *ngIf="!conf.mobileMode()"
+   viewBox="0 0 69.370247 42.747798">
+   <defs>
+      <filter id="drop-shadow-definition"
+         x="-0.078824035"
+         y="-0.063239153"
+         width="1.134907"
+         height="1.1521212">
+         <feFlood id="shadow-flood"
+            flood-opacity="0.670588"
+            flood-color="rgb(0,0,0)"
+            result="flood" />
+         <feComposite id="shadow-composite-01"
+            in="flood"
+            in2="SourceGraphic"
+            operator="in"
+            result="composite1" />
+         <feGaussianBlur id="shadow-blur"
+            in="composite1"
+            stdDeviation="0.5"
+            result="blur" />
+         <feOffset id="shadow-offset"
+            dx="-0.5"
+            dy="0.5"
+            result="offset" />
+         <feComposite id="shadow-composite-02" 
+            in="SourceGraphic"
+            in2="offset"
+            operator="over"
+            result="composite2"/>
+      </filter>
+   </defs>
+   <g id="clothing-content"
+      aria-labelledby="clothing-title-text"
+      role="region">
+      <use id="content-decoration" 
+         role="presentation"
+         href="/assets/svgs/graphics/definitions_clothing.svg#content-decoration-definition"
+         style="filter:url(#drop-shadow-definition)"/>
+
+      <!--TODO-->
+      <rect id="content-container"
+         class="micro-stroke"
+         width="29.209091"
+         height="36.504696"
+         x="33.651176"
+         y="3.2933476"/>
+   </g>
+   <g id="clothing-menu"
+      role="menu"
+      aria-label="Shopping categories"
+      aria-controls="clothing-content">
+      <use id="menu-decoration"
+         role="presentation"
+         href="/assets/svgs/graphics/definitions_clothing.svg#menu-decoration-definition"
+         style="filter:url(#drop-shadow-definition)"/>
+      <g id="clothing-category-buttons">
+         <g id="category-01-button"
+            role="button"
+            aria-labelledby="category-01-text">
+            <use id="category-01-btn-background"
+               class="micro-stroke"
+               role="presentation"
+               href="/assets/svgs/graphics/definitions_clothing.svg#desktop-btn-background-definition"   
+               y="24.206285"/>
+            <text id="category-01-text">
+               <tspan id="category-01-text-container"
+                  x="10.063455"
+                  y="26.669724">
+                  CATEGORY1
+               </tspan>
+            </text>
+            <use id="category-01-chevron"
+               role="img"
+               aria-label="Shop for Category 1"
+               class="med-stroke"
+               href="/assets/svgs/graphics/definitions_clothing.svg#desktop-chevron-definition" />
+         </g>
+         <g id="category-02-button"
+            aria-labelledby="category-02-text"
+            role="button">
+            <use id="category-02-btn-background"
+               role="presentation"
+               class="micro-stroke"
+               href="/assets/svgs/graphics/definitions_clothing.svg#desktop-btn-background-definition"
+               y="27.849098" />
+            <text id="category-02-text">
+                  <tspan id="category-02-text-container"
+                     x="10.063478"
+                     y="30.30505">
+                     CATEGORY2
+                  </tspan>
+            </text>
+            <use id="category-02-chevron"
+               class="med-stroke"
+               role="img"
+               aria-label="Shop for Category 2"
+               transform="translate(0,3.647009)"
+               href="/assets/svgs/graphics/definitions_clothing.svg#desktop-chevron-definition" />
+         </g>
+         <g id="category-03-button"
+            role="button"
+            aria-labelledby="category-03-text">
+            <use id="category-03-btn-background" 
+               role="presentation"
+               class="micro-stroke"
+               aria-hidden="true" 
+               href="/assets/svgs/graphics/definitions_clothing.svg#desktop-btn-background-definition"
+               y="31.517014"/>
+            <text id="category-03-text">
+               <tspan id="category-03-text-container"
+                  class="med-stroke"
+                  x="10.194918"
+                  y="33.944912"
+                  >CATEGORY3
+               </tspan>
+            </text>
+            <use id="category-03-chevron"
+               role="img"
+               aria-label="Shop for Category 3"
+               class="med-stroke"
+               transform="translate(0,7.294018)"
+               href="/assets/svgs/graphics/definitions_clothing.svg#desktop-chevron-definition" />
+         </g>
+         <g id="category-04-button"
+            role="button"
+            aria-labelledby="category-04-text">
+            <use id="category-04-btn-background"
+               role="presentation" 
+               class="micro-stroke"
+               href="/assets/svgs/graphics/definitions_clothing.svg#desktop-btn-background-definition"
+               y="35.239361"/>
+            <text id="category-04-text">
+               <tspan id="category-04-text-container"
+                  class="med-stroke"
+                  x="10.217941"
+                  y="37.61792">
+                  CATEGORY4
+               </tspan>
+            </text>
+            <use id="category-04-chevron"
+               class="med-stroke"
+               role="img"
+               aria-label="Shop for Category 4"
+               transform="translate(0,10.941027)"
+               href="/assets/svgs/graphics/definitions_clothing.svg#desktop-chevron-definition"  />
+         </g>
+      </g>
+   </g>
+   <g id="clothing-banner"
+      role="banner">
+      <g id="star"
+         role="button"
+         (click)="close()"
+         transform="translate(1.3162637,0.65061813)"
+         style="filter:url(#drop-shadow-definition)">
+         <use id="outer-star"
+            role="presentation"
+            class="half-stroke"
+            href="/assets/svgs/graphics/definitions_clothing.svg#star-definition"
+            transform="matrix(0.26458333,0,0,0.26458333,0.6005595,3.3777345)" />
+         <use id="inner-star"
+            role="img"
+            aria-label="Go back to main store page"
+            href="/assets/svgs/graphics/definitions_clothing.svg#star-definition"
+            transform="matrix(0.22432801,0,0,0.2300492,2.4793943,4.4004627)" />
+      </g>
+      <g id="clothing-title"
+         aria-level="1"
+         role="heading">
+         <use id="clothing-title-shadow-02"
+            role="presentation"
+            href="/assets/svgs/graphics/definitions_clothing.svg#title-shadow-02-definition"/>
+         <use id="clothing-title-shadow-01"
+            role="presentation"
+            href="/assets/svgs/graphics/definitions_clothing.svg#title-shadow-01-definition"/>
+         <use id="clothing-title-text"
+            aria-label="Clothing"
+            href="/assets/svgs/graphics/definitions_clothing.svg#title-text-definition"/>
+      </g>
+      <path id="back-button"
+         d="m 15.578823,12.288572 c 0,0.610195 -0.49444,1.104635 -1.104635,1.104635 -0.609369,0 -1.104636,-0.49444 -1.104636,-1.104636 0,-0.610195 0.49444,-1.104635 1.104636,-1.104635 v 0.552318 L 15.415939,10.816 14.474188,9.8957459 v 0.5523181 c -1.016166,0 -1.840508,0.824342 -1.840508,1.840507 0,1.016166 0.824342,1.840508 1.840508,1.840508 1.016165,0 1.840507,-0.824342 1.840507,-1.840508 z"
+         (click)="close()"
+         class="nano-stroke"
+         role="button"
+         aria-label="Go back" />
+   </g>
+   <foreignObject id="store-viewport"
+      class="non-clickable"
+      x="0"
+      y="0"
+      width="69.370247"
+      height="42.747798">
+      <div id="clothing-animation"
+         [class.clothing-off-animation]="closing"
+         [class.hidden]="!closing">
+      </div>
+   </foreignObject>
+</svg>
+
+<svg id="mobile-clothing-dept"
+   *ngIf="conf.mobileMode()"
+   viewBox="0 0 75.603994 134.4066">
+   <defs>
+      <filter id="drop-shadow-definition"
+         style="color-interpolation-filters:sRGB;"
+         x="-0.43323052"
+         y="-0.41703798"
+         width="1.8326109"
+         height="1.9718736">
+         <feFlood id="feFlood31372" 
+            flood-opacity="0.670588"
+            flood-color="rgb(0,0,0)"
+            result="flood"/>
+         <feComposite id="feComposite31374"
+            in="flood"
+            in2="SourceGraphic"
+            operator="in"
+            result="composite1" />
+         <feGaussianBlur id="feGaussianBlur31376"
+            in="composite1"
+            stdDeviation="2.5"
+            result="blur" />
+         <feOffset id="feOffset31378"
+            dx="-0.513025"
+            dy="2"
+            result="offset" />
+         <feComposite id="feComposite31380"
+            in="SourceGraphic"
+            in2="offset"
+            operator="over"
+            result="composite2" />
+      </filter>
+   </defs>
+   <g id="clothing-star"
+      role="banner"
+      style="filter:url(#drop-shadow-definition)"
+      (click)="close()">
+      <use id="outer-star"
+         role="presentation"
+         class="half-stroke"
+         href="/assets/svgs/graphics/definitions_clothing.svg#star-definition"
+         transform="matrix(1.4997755,0,0,1.4997755,18.324267,-3.2760163) matrix(0.26458333,0,0,0.26458333,0.6005595,3.3777345)"/>
+      <use id="inner-star"
+         role="presentation"
+         href="/assets/svgs/graphics/definitions_clothing.svg#star-definition"
+         transform="matrix(1.4997755,0,0,1.4997755,18.324267,-3.2760163) matrix(0.22432801,0,0,0.2300492,2.4793943,4.4004627)"/>
+      <path id="back-button"
+         d="m 40.024601,14.217368 c 0,1.153124 -0.934375,2.087499 -2.087499,2.087499 -1.151564,0 -2.087501,-0.934375 -2.087501,-2.087501 0,-1.153125 0.934374,-2.087499 2.087501,-2.087499 v 1.04375 l 1.779687,-1.739063 -1.779687,-1.7390616 v 1.0437496 c -1.920313,0 -3.478126,1.557812 -3.478126,3.478124 0,1.920313 1.557812,3.478125 3.478126,3.478125 1.920312,0 3.478123,-1.557812 3.478123,-3.478125 z"
+         (click)="close()"
+         class="micro-stroke"
+         role="button"
+         aria-label="Go back" />
+   </g>
+   <g id="category-buttons"
+     transform="translate(0.30674178,15.332448)"
+     style="filter:url(#drop-shadow-definition)">
+      <g id="category-01-button"
+         role="button"
+         aria-labelledby="category-01-text">
+         <use id="category-01-btn-background"
+            role="presentation" 
+            href="/assets/svgs/graphics/definitions_clothing.svg#mobile-btn-background-definition"/>
+         <use id="category-01-chevron"
+            role="img"
+            aria-label="Shop for Category 1"
+            href="/assets/svgs/graphics/definitions_clothing.svg#mobile-chevron-definition" />
+         <text id="category-01-text">
+            <tspan id="category-01-text-container"
+               class="med-stroke"
+               x="19.259651"
+               y="45.565983">
+               CATEGORY1
+            </tspan>
+         </text>
+      </g>
+      <g id="category-02-button"
+         role="button"
+         transform="translate(-0.11845788,21.271733)">
+         <use id="category-02-btn-background" 
+            role="presentation"
+            href="/assets/svgs/graphics/definitions_clothing.svg#mobile-btn-background-definition"/>
+         <use id="category-02-chevron"
+            role="img"
+            aria-label="Shop for Category 2"
+            href="/assets/svgs/graphics/definitions_clothing.svg#mobile-chevron-definition" />
+         <text id="category-02-text">
+            <tspan id="category-02-text-container"
+               class="med-stroke"
+               x="19.259651"
+               y="45.565983">
+               CATEGORY2
+            </tspan>
+         </text>
+      </g>
+      <g id="category-03-button"
+         role="button"
+         transform="translate(0.11845788,42.543468)">
+         <use id="category-03-btn-background" 
+            role="presentation"
+            href="/assets/svgs/graphics/definitions_clothing.svg#mobile-btn-background-definition" />
+         <use id="category-03-chevron"
+            role="img"
+            aria-label="Shop for Category 3"
+            href="/assets/svgs/graphics/definitions_clothing.svg#mobile-chevron-definition"/>
+         <text id="category-03-text">
+            <tspan id="category-03-text-container"
+               class="med-stroke"
+               x="19.259651"
+               y="45.565983">
+               CATEGORY3
+            </tspan>
+         </text>
+      </g>
+      <g id="category-04-button"
+         role="button"
+         transform="translate(0.11437758,63.815197)">
+         <use id="category-04-btn-background"
+            role="presentation"
+            href="/assets/svgs/graphics/definitions_clothing.svg#mobile-btn-background-definition" />
+         <use id="category-04-chevron"
+            role="img"
+            aria-label="Shop for Category 4"
+            href="/assets/svgs/graphics/definitions_clothing.svg#mobile-chevron-definition" />
+         <text id="category-04-text">
+            <tspan id="category-04-text-container"
+               class="med-stroke"
+               x="19.259651"
+               y="45.565983">
+               CATEGORY4
+            </tspan>
+         </text>
+      </g>
+   </g>
+</svg>
