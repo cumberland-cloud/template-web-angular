@@ -45,7 +45,7 @@ done
 
 if [[ -z "$ACTION" || -z "$APPLICATION" ]]
 then
-  echo -e "---------- \e[2mCUMBERLAND CLOUD APPLICATION\e[0m ---------- \n" 
+  echo -e "--------- \e[2mCUMBERLAND CLOUD WEB APPLICATION\e[0m --------- \n" 
   echo -e "Provision the necessary AWS infrastructure for a cloud native "
   echo -e "web application through CloudFormation stack templates. \n"
 fi
@@ -90,7 +90,7 @@ then
   log "Creating \e[1m${APPLICATION^}-WebStack\e[0m"
   aws cloudformation create-stack \
         --stack-name "${APPLICATION^}-WebStack" \
-        --template-body file://cloudformation.yml \
+        --template-body file://.aws/cloudformation.yml \
         --capabilities CAPABILITY_NAMED_IAM \
         --parameters ParameterKey=applicationName,ParameterValue=$APPLICATION \
                       ParameterKey=domainName,ParameterValue=$DOMAIN \
@@ -102,7 +102,7 @@ then
   log "Updating \e[1m${APPLICATION^}-WebStack\e[0m"
   aws cloudformation update-stack \
           --stack-name "${APPLICATION^}-WebStack" \
-          --template-body file://cloudformation.yml \
+          --template-body file://.aws/cloudformation.yml \
           --capabilities CAPABILITY_NAMED_IAM \
           --parameters ParameterKey=applicationName,ParameterValue=$APPLICATION \
                         ParameterKey=domainName,ParameterValue=$DOMAIN \

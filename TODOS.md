@@ -1,7 +1,3 @@
-1. add edge_handler update to pipeline
+1. edge function as part of terraform distribution module. Add edge handler to source project and publis h updates with pipelien.
 
-2. add edge_function to cloudformation template
-
-3. layered drop down for shop.
-    - > first layer = departments. select then fold.
-    - > second layer items.
+2. Update CF env vars for buildspec now that ${APPLICATION} is ${DISTRIBUTION_BUCKET}
