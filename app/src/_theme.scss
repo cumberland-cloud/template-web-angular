@@ -1,4 +1,4 @@
-@use "~@angular/material" as mat;
+@use "@angular/material" as mat;
 @use "sass:map";
 
 @use "./global.theme" as global;
@@ -11,7 +11,7 @@
 @use "./app/store/components/clothing/clothing.theme" as clothing;
 @use "./app/shared/components/error/error.theme" as error;
 
-@import "~@angular/material/theming";
+@import "@angular/material/theming";
 
 $copper_palette: (
     900:#833316,
