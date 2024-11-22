@@ -3,8 +3,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
    <url>
-      <loc>https://sunshine-daze.cumberland-cloud.com/</loc>
-      <lastmod>2022-05-21</lastmod>
+      <loc>https://SUBDOMAIN.DOMAIN.COM/</loc>
+      <lastmod>DATE</lastmod>
       <changefreq>monthly</changefreq>
       <priority>1</priority>
    </url>

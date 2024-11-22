@@ -1,4 +1,0 @@
-/
-/about
-/contact
-/404
