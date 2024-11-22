@@ -11,7 +11,7 @@
 @use "./app/store/components/clothing/clothing.theme" as clothing;
 @use "./app/shared/components/error/error.theme" as error;
 
-@import "@angular/material/theming";
+@use '@angular/material' as mat;
 
 $copper_palette: (
     900:#833316,
@@ -109,8 +109,6 @@ $jade_palette: (
         900: #ffffff,
     )
 );
-
-// TODO: create your own theme. these colors aren't used anywher.
 
 $primary: mat-palette($amaranth_palette);
 $complement: mat-palette($kornikova_palette);

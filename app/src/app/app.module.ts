@@ -20,7 +20,6 @@ import { IconConfig, ImgConfig } from 'src/properties';
 import { SharedModule } from './shared/shared.module';
 import { HomeComponent } from './home/home.component';
 import { ConfService } from 'src/services/conf.service';
-import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [

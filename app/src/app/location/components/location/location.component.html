@@ -2,23 +2,7 @@
     <h1 *ngIf="!conf.viewport" class="mat-h1">Find Us</h1>
     <div id="map-container">
         <span id="map-border">
-            <agm-map 
-                [latitude]="conf.latitude" 
-                [longitude]="conf.longitude"
-                [zoom]="19">
-                <agm-marker 
-                    [latitude]="conf.latitude" 
-                    [longitude]="conf.longitude">
-                    <agm-info-window>
-                        <h5>Sunshine Daze</h5>
-                        <a id="google-maps-link"
-                            target="_blank"
-                            [href]="conf.mapsUrl">
-                            Open in Google Maps
-                        </a>
-                    </agm-info-window>
-                </agm-marker>
-            </agm-map>
+            map goes here
         </span>
     </div>
     <div id="button-container" 
