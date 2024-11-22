@@ -9,17 +9,21 @@ import {
   NgxGoogleAnalyticsRouterModule,
 } from 'ngx-google-analytics';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HammerConfig } from 'src/hammer';
 import { MatIconRegistry } from '@angular/material/icon';
+import { HammerConfig } from 'src/hammer';
+
 import { environment } from 'src/environments/environment';
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MaterialModule } from './app-material.module';
 import { MetaService } from 'src/services/meta.service';
+
 import { IconConfig, ImgConfig } from 'src/properties';
+
+import { AppRoutingModule } from './app-routing.module';
+import { MaterialModule } from './app-material.module';
 import { SharedModule } from './shared/shared.module';
 import { HomeComponent } from './home/home.component';
 import { ConfService } from 'src/services/conf.service';
+
 
 @NgModule({
   declarations: [
@@ -41,7 +45,7 @@ import { ConfService } from 'src/services/conf.service';
       useClass: HammerConfig,
     },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { 
   constructor(

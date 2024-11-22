@@ -1,3 +1,3 @@
-1. edge function as part of terraform distribution module. Add edge handler to source project and publis h updates with pipelien.
-
-2. Update CF env vars for buildspec now that ${APPLICATION} is ${DISTRIBUTION_BUCKET}
+1. Remove site specific content. 
+2. Refactor out lazy-loaded modules and migrate to standalone components.
+    - Each component imports its own libraries!
