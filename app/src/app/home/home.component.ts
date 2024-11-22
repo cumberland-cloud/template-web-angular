@@ -2,11 +2,12 @@ import { Component, ElementRef } from '@angular/core';
 import { ConfService } from 'src/services/conf.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.svg',
-  styleUrls: [
-    './home.component.css'
-  ]
+    selector: 'app-home',
+    templateUrl: './home.component.svg',
+    styleUrls: [
+        './home.component.css'
+    ],
+    standalone: false
 })
 export class HomeComponent{
   constructor(

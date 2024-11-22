@@ -30,10 +30,11 @@ import {
 const SWITCH_DURATION=1;
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: [ './app.component.css' ],
-  animations:[ ]
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css'],
+    animations: [],
+    standalone: false
 })
 export class AppComponent {
 

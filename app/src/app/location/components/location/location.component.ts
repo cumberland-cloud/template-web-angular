@@ -3,9 +3,10 @@ import { ConfService } from 'src/services/conf.service';
 import { NavService } from 'src/services/nav.service';
 
 @Component({
-  selector: 'app-location',
-  templateUrl: './location.component.html',
-  styleUrls: ['./location.component.css']
+    selector: 'app-location',
+    templateUrl: './location.component.html',
+    styleUrls: ['./location.component.css'],
+    standalone: false
 })
 export class LocationComponent implements OnInit {
 

@@ -5,9 +5,10 @@ import { ConfService } from 'src/services/conf.service';
 import { NavService } from 'src/services/nav.service';
 
 @Component({
-  selector: 'app-contact',
-  templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.css']
+    selector: 'app-contact',
+    templateUrl: './contact.component.html',
+    styleUrls: ['./contact.component.css'],
+    standalone: false
 })
 export class ContactComponent {
 
