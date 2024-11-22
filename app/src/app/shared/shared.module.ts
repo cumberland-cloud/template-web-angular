@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { 
   FormsModule, 
   ReactiveFormsModule 
@@ -10,30 +10,21 @@ import { SharedMaterialModule } from './shared-material.module';
 import { SafePipe } from './pipes/sanitize.pipe';
 import { RouterModule } from '@angular/router';
 
-@NgModule({
-  declarations: [
-    ErrorComponent, 
-    
-    SafePipe, 
-  ],
-  imports: [
-    CommonModule,
-    FormsModule,
-    HttpClientModule,
-    ReactiveFormsModule,
-    SharedMaterialModule,
-    RouterModule,
-  ],
-  exports: [
-    ErrorComponent,
-
-    CommonModule,
-    FormsModule,
-    HttpClientModule,
-    ReactiveFormsModule,
-    SharedMaterialModule,
-
-    SafePipe,
-  ],
-})
+@NgModule({ declarations: [
+        ErrorComponent,
+        SafePipe,
+    ],
+    exports: [
+        ErrorComponent,
+        CommonModule,
+        FormsModule,
+        HttpClientModule,
+        ReactiveFormsModule,
+        SharedMaterialModule,
+        SafePipe,
+    ], imports: [CommonModule,
+        FormsModule,
+        ReactiveFormsModule,
+        SharedMaterialModule,
+        RouterModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class SharedModule {}
